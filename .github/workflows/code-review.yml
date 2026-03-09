@@ -1,4 +1,5 @@
-name: Junie Code Review
+# .github/workflows/code-review.yml
+name: Code Review
 
 on:
   pull_request:
