@@ -54,8 +54,9 @@ src/
 | `LiteralXXx` | リテラル解説 | `Literal03a.java` |
 | `ExXXXX` | 演習問題 | `Ex0101.java` |
 
-## GitHub Actions（Claude Code Review）
+## GitHub Actions
 
+### Claude Code Review
 `.github/workflows/claude-review.yml` を使うには、GitHub Secrets の設定が必要です。
 
 設定手順:
@@ -65,6 +66,18 @@ src/
 
 動作:
 - コメントで `@claude` を付けるとレビュー応答（Owner/Member/Collaborator のみ）
+
+### Junie Code Review
+`.github/workflows/junie-review.yml` を使うには、GitHub Secrets の設定が必要です。
+
+設定手順:
+1. GitHub のリポジトリ画面で `Settings` → `Secrets and variables` → `Actions` → `New repository secret`
+2. Name: `JUNIE_API_KEY`
+3. Value: JetBrains Junie の API キー
+
+動作:
+- PR 作成/更新で自動実行
+- レビューコメントは同一コメントを更新（`use_single_comment: true`）
 
 ## ドキュメント
 
